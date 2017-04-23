@@ -1,3 +1,5 @@
+> Check out the [sass-npm-scope](https://github.com/ospatil/angular-quickstart-lib/tree/sass-npm-scope) branch for sass and npm scoped package support. Here is a the [code comparison](https://github.com/filipesilva/angular-quickstart-lib/compare/master...ospatil:sass-npm-scope).
+
 # Warning
 
 This quickstart is under active development and hasn't yet reached its final form.
@@ -23,7 +25,7 @@ Common tasks are present as npm scripts:
 - `npm start` to run a live-reload server with the demo app
 - `npm run test` to test in watch mode, or `npm run test:once` to only run once
 - `npm run build` to build the library
-- `npm run lint` to lint 
+- `npm run lint` to lint
 - `npm run clean` to clean
 - `npm run integration` to run the integration e2e tests
 - `npm install ./relative/path/to/lib` after `npm run build` to test locally in another app
