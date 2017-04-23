@@ -1,5 +1,5 @@
 {
-  "name": "quickstart-lib",
+  "name": "@op/quickstart-lib",
   "version": "1.0.0",
   "description": "Library QuickStart package.json from the documentation, supplemented with testing support",
   "main": "./quickstart-lib.umd.js",

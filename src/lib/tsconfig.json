@@ -16,7 +16,7 @@
     "strictMetadataEmit": true,
     "skipTemplateCodegen": true,
     "flatModuleOutFile": "quickstart-lib.js",
-    "flatModuleId": "quickstart-lib",
+    "flatModuleId": "@op/quickstart-lib",
     "genDir": "../../out-tsc/lib-gen-dir/"
   }
 }
