@@ -8,9 +8,9 @@ const ngc = require('@angular/compiler-cli/src/main').main;
 const rollup = require('rollup');
 const uglify = require('rollup-plugin-uglify');
 const sourcemaps = require('rollup-plugin-sourcemaps');
+const execa = require('execa');
 
 const inlineResources = require('./inline-resources');
-
 
 const libName = require('./package.json').name;
 const rootFolder = path.join(__dirname);
@@ -22,8 +22,9 @@ const es5OutputFolder = path.join(compilationFolder, 'lib-es5');
 const es2015OutputFolder = path.join(compilationFolder, 'lib-es2015');
 
 return Promise.resolve()
-  // Copy library to temporary folder and inline html/css.
+  // Copy library to temporary folder, compile sass files and inline html/css.
   .then(() => _relativeCopy(`**/*`, srcFolder, tempLibFolder)
+    .then(() => compileSassFiles())
     .then(() => inlineResources(tempLibFolder))
     .then(() => console.log('Inlining succeeded.'))
   )
@@ -146,4 +147,16 @@ function _recursiveMkDir(dir) {
     _recursiveMkDir(path.dirname(dir));
     fs.mkdirSync(dir);
   }
+}
+
+function compileSassFiles() {
+  return execa('node-sass', [
+    srcFolder,
+    '-o', srcFolder,
+    '--output-style',
+    'compressed',
+    '--source-map',
+    true,
+    '--source-map-contents'
+  ]);
 }
