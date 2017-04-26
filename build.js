@@ -152,8 +152,8 @@ function _recursiveMkDir(dir) {
 
 function compileSassFiles() {
   return execa('node-sass', [
-    srcFolder,
-    '-o', srcFolder,
+    tempLibFolder,
+    '-o', tempLibFolder,
     '--output-style',
     'compressed',
     '--source-map',
