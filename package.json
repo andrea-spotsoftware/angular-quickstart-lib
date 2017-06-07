@@ -2,7 +2,7 @@
   "name": "@op/quickstart-lib",
   "version": "1.0.0",
   "description": "Library QuickStart package.json from the documentation, supplemented with testing support",
-  "main": "./quickstart-lib.umd.js",
+  "main": "./bundles/quickstart-lib.umd.js",
   "module": "./quickstart-lib.es5.js",
   "es2015": "./quickstart-lib.js",
   "typings": "./quickstart-lib.d.ts",
@@ -14,7 +14,7 @@
     "npm": ">= 3.0.0"
   },
   "scripts": {
-    "clean": "rimraf out-tsc dist \"src/lib/**/*.js\" \"src/lib/**/*.map\"",
+    "clean": "rimraf out-tsc dist/* \"src/lib/**/*.js\" \"src/lib/**/*.map\"",
     "prebuild": "npm run clean",
     "build": "node build.js",
     "build-demo": "tsc -p src/demo/",
