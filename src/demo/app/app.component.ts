@@ -7,6 +7,7 @@ import { LibService } from 'quickstart-lib';
 })
 export class AppComponent {
   meaning: number;
+  sampleValue = 10;
   constructor(libService: LibService) {
     this.meaning = libService.getMeaning();
   }
