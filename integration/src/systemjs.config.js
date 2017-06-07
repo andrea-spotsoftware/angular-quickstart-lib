@@ -4,6 +4,7 @@
  */
 (function (global) {
   System.config({
+    defaultJSExtensions: true,
     paths: {
       // paths serve as alias
       'npm:': 'node_modules/'
@@ -26,7 +27,9 @@
       // other libraries
       'rxjs':                      'npm:rxjs',
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
-      '@op/quickstart-lib': 'npm:@op/quickstart-lib/bundles/quickstart-lib.umd.js'
+      '@op/quickstart-lib': 'npm:@op/quickstart-lib/bundles/quickstart-lib.umd.js',
+      'inputmask': 'npm:inputmask/dist/inputmask/inputmask.js',
+      'inputmask.numeric.extensions': 'npm:inputmask/dist/inputmask/inputmask.numeric.extensions.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
