@@ -6,6 +6,7 @@ import { LibService } from '@op/quickstart-lib';
   template: `
     <my-lib></my-lib>
     <h3>Meaning is: {{meaning}}</h3>
+    <et-numeric-text-box></et-numeric-text-box>
   `,
 })
 export class AppComponent {

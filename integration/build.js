@@ -24,7 +24,10 @@ const rollupConfig = {
   plugins: [
     nodeResolve({ jsnext: true, module: true }),
     commonjs({
-      include: ['node_modules/rxjs/**','node_modules/inputmask/**']
+      include: [
+        'node_modules/rxjs/**',
+        'node_modules/inputmask/**'
+      ]
     }),
     uglify()
   ]
