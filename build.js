@@ -8,6 +8,8 @@ const ngc = require('@angular/compiler-cli/src/main').main;
 const rollup = require('rollup');
 const uglify = require('rollup-plugin-uglify');
 const sourcemaps = require('rollup-plugin-sourcemaps');
+const resolve = require('rollup-plugin-node-resolve');
+const commonjs = require('rollup-plugin-commonjs');
 const execa = require('execa');
 
 const inlineResources = require('./inline-resources');
@@ -30,12 +32,16 @@ return Promise.resolve()
     .then(() => console.log('Inlining succeeded.'))
   )
   // Compile to ES2015.
-  .then(() => ngc({ project: `${tempLibFolder}/tsconfig.json` })
+  .then(() => ngc({
+      project: `${tempLibFolder}/tsconfig.json`
+    })
     .then(exitCode => exitCode === 0 ? Promise.resolve() : Promise.reject())
     .then(() => console.log('ES2015 compilation succeeded.'))
   )
   // Compile to ES5.
-  .then(() => ngc({ project: `${tempLibFolder}/tsconfig.es5.json` })
+  .then(() => ngc({
+      project: `${tempLibFolder}/tsconfig.es5.json`
+    })
     .then(exitCode => exitCode === 0 ? Promise.resolve() : Promise.reject())
     .then(() => console.log('ES5 compilation succeeded.'))
   )
@@ -63,7 +69,7 @@ return Promise.resolve()
         '@angular/core': 'ng.core',
         '@angular/forms': 'ng.forms',
         '@angular/common': 'ng.common',
-        'inputmask': 'Inputmask'
+        'inputmask': 'inputmask'
       },
       external: [
         // List of dependencies
@@ -75,6 +81,16 @@ return Promise.resolve()
         'inputmask.numeric.extensions'
       ],
       plugins: [
+        resolve({
+          jsnext: true,
+          main: true
+        }),
+        commonjs({
+          include: [
+            'node_modules/inputmask/**',
+            'node_modules/the-answer/**'
+          ]
+        }),
         sourcemaps()
       ]
     };
@@ -135,7 +151,10 @@ return Promise.resolve()
 // Copy files maintaining relative paths.
 function _relativeCopy(fileGlob, from, to) {
   return new Promise((resolve, reject) => {
-    glob(fileGlob, { cwd: from, nodir: true }, (err, files) => {
+    glob(fileGlob, {
+      cwd: from,
+      nodir: true
+    }, (err, files) => {
       if (err) reject(err);
       files.forEach(file => {
         const origin = path.join(from, file);

@@ -27,7 +27,8 @@
       // other libraries
       'rxjs': 'npm:rxjs',
       'inputmask': 'npm:inputmask/dist/inputmask/inputmask.js',
-      'inputmask.numeric.extensions': 'npm:inputmask/dist/inputmask/inputmask.numeric.extensions.js'
+      'inputmask.numeric.extensions': 'npm:inputmask/dist/inputmask/inputmask.numeric.extensions.js',
+      'the-answer': 'npm:the-answer/dist/the-answer.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {

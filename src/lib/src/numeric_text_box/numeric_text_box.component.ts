@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, OnChanges, Input } from '@angular/core';
-import * as Inputmask from 'inputmask';
-import 'inputmask.numeric.extensions';
+// import * as Inputmask from 'inputmask';
+import Inputmask from 'inputmask.numeric.extensions';
 
 @Component({
   moduleId: module.id,

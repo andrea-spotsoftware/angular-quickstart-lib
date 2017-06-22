@@ -74,9 +74,10 @@ System.config({
     '@angular/router/testing': 'npm:@angular/router/bundles/router-testing.umd.js',
     '@angular/forms/testing': 'npm:@angular/forms/bundles/forms-testing.umd.js',
     'rxjs': 'npm:rxjs',
-    'src': 'src'
+    'src': 'src',
     'inputmask': 'npm:inputmask/dist/inputmask/inputmask.js',
-    'inputmask.numeric.extensions': 'npm:inputmask/dist/inputmask/inputmask.numeric.extensions.js'
+    'inputmask.numeric.extensions': 'npm:inputmask/dist/inputmask/inputmask.numeric.extensions.js',
+    'the-answer': 'npm:the-answer/dist/the-answer.js',
   }
 });
 

@@ -49,6 +49,9 @@ module.exports = function (config) {
       // inputmask
       { pattern: 'node_modules/inputmask/**/*.js', included: false, watched: false },
 
+      // the-answer
+      { pattern: 'node_modules/the-answer/**/*.js', included: false, watched: false },
+
       // Paths loaded via module imports:
       // Angular itself
       { pattern: 'node_modules/@angular/**/*.js', included: false, watched: false },

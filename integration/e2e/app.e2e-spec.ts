@@ -18,6 +18,10 @@ describe('QuickStart Lib E2E Tests', function () {
     expect(element(by.css('h3')).getText()).toEqual('Meaning is: 42');
   });
 
+  it('should display answer', () => {
+    expect(element(by.css('h1')).getText()).toContain('42');
+  });
+
   it('should display an input with formatted numeric value', () => {
     browser.pause();
     expect(element(by.css('input')).getText()).toEqual('0,0000');
