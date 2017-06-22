@@ -1,9 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef, OnChanges, Input } from '@angular/core';
 // import * as Inputmask from 'inputmask';
-import Inputmask from 'inputmask.numeric.extensions';
+import Inputmask from 'inputmask/dist/inputmask/inputmask.numeric.extensions';
 
 @Component({
-  moduleId: module.id,
   selector: 'et-numeric-text-box',
   templateUrl: './numeric_text_box.html'
 })

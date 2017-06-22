@@ -31,10 +31,10 @@ describe('LibComponent', function () {
       '<h2> should say something about "Angular"');
   });
 
-  it('should have expected <h1> text', () => {
-    de = fixture.debugElement.query(By.css('h1'));
-    fixture.detectChanges();
-    const h1 = de.nativeElement;
-    expect(h1.innerText).toContain('42');
-  });
+  // it('should have expected <h1> text', () => {
+  //   de = fixture.debugElement.query(By.css('h1'));
+  //   fixture.detectChanges();
+  //   const h1 = de.nativeElement;
+  //   expect(h1.innerText).toContain('42');
+  // });
 });

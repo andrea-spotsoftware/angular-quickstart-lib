@@ -26,7 +26,7 @@
 
       // other libraries
       'rxjs': 'npm:rxjs',
-      'inputmask': 'npm:inputmask/dist/inputmask/inputmask.js',
+      'inputmask': 'npm:inputmask',
       'inputmask.numeric.extensions': 'npm:inputmask/dist/inputmask/inputmask.numeric.extensions.js',
       'the-answer': 'npm:the-answer/dist/the-answer.js'
     },

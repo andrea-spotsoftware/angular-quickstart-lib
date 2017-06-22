@@ -75,7 +75,7 @@ System.config({
     '@angular/forms/testing': 'npm:@angular/forms/bundles/forms-testing.umd.js',
     'rxjs': 'npm:rxjs',
     'src': 'src',
-    'inputmask': 'npm:inputmask/dist/inputmask/inputmask.js',
+    'inputmask': 'npm:inputmask',
     'inputmask.numeric.extensions': 'npm:inputmask/dist/inputmask/inputmask.numeric.extensions.js',
     'the-answer': 'npm:the-answer/dist/the-answer.js',
   }
