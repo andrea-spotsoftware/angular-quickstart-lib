@@ -67,7 +67,8 @@ return Promise.resolve()
         '@angular/core': 'ng.core',
         '@angular/forms': 'ng.forms',
         '@angular/common': 'ng.common',
-        'inputmask': 'inputmask'
+        'inputmask/dist/inputmask/inputmask.numeric.extensions': 'Inputmask',
+        'the-answer': 'answer'
       },
       external: [
         // List of dependencies
@@ -75,8 +76,8 @@ return Promise.resolve()
         '@angular/core',
         '@angular/common',
         '@angular/forms',
-        'inputmask',
-        'inputmask.numeric.extensions'
+        // 'inputmask/dist/inputmask/inputmask.numeric.extensions',
+        // 'the-answer'
       ],
       plugins: [
         resolve({
