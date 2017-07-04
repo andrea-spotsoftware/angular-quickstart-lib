@@ -76,20 +76,20 @@ return Promise.resolve()
         '@angular/core',
         '@angular/common',
         '@angular/forms',
-        // 'inputmask/dist/inputmask/inputmask.numeric.extensions',
-        // 'the-answer'
+        'inputmask/dist/inputmask/inputmask.numeric.extensions',
+        'the-answer'
       ],
       plugins: [
-        resolve({
-          jsnext: true,
-          main: true
-        }),
-        commonjs({
-          include: [
-            'node_modules/inputmask/**',
-            'node_modules/the-answer/**'
-          ]
-        }),
+        // resolve({
+        //   jsnext: true,
+        //   main: true
+        // }),
+        // commonjs({
+        //   include: [
+        //     'node_modules/inputmask/**',
+        //     'node_modules/the-answer/**'
+        //   ]
+        // }),
         sourcemaps()
       ]
     };

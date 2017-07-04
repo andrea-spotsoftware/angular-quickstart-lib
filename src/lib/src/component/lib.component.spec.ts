@@ -24,17 +24,17 @@ describe('LibComponent', function () {
 
   it('should create component', () => expect(comp).toBeDefined());
 
-  it('should have expected <h2> text', () => {
-    fixture.detectChanges();
-    const h2 = de.nativeElement;
-    expect(h2.innerText).toMatch(/angular/i,
-      '<h2> should say something about "Angular"');
-  });
-
-  // it('should have expected <h1> text', () => {
-  //   de = fixture.debugElement.query(By.css('h1'));
+  // it('should have expected <h2> text', () => {
   //   fixture.detectChanges();
-  //   const h1 = de.nativeElement;
-  //   expect(h1.innerText).toContain('42');
+  //   const h2 = de.nativeElement;
+  //   expect(h2.innerText).toMatch(/angular/i,
+  //     '<h2> should say something about "Angular"');
   // });
+
+  it('should have expected <h1> text', () => {
+    de = fixture.debugElement.query(By.css('h1'));
+    fixture.detectChanges();
+    const h1 = de.nativeElement;
+    expect(h1.innerText).toContain('42');
+  });
 });
